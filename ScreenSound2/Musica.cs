@@ -7,8 +7,14 @@
  */
 class Musica
 {
-    public string Nome { get; set; } // Nome da música
-    public string Artista { get; set; } // Nome do artista
+    public Musica(Banda artista, string nome)
+    {
+        Artista = artista;
+        Nome = nome;
+    }
+
+    public string Nome { get; } // Nome da música
+    public Banda Artista { get; } // Nome do artista
     public int Duracao { get; set; } // Duração da música em segundos (ou minutos, conforme o caso)
     public bool Disponivel { get; set; } // Indica se a música está disponível (true) ou não (false)
     public string DescricaoResumida => $"A música {Nome} pertence à banda {Artista}"; // Método lambda que gera uma descrição resumida da música e é somente leitura
@@ -16,7 +22,7 @@ class Musica
     public void ExibirFichaTecnica() // Método que exibe informações sobre a música
     {
         Console.WriteLine($"Nome: {Nome}");
-        Console.WriteLine($"Artista: {Artista}");
+        Console.WriteLine($"Artista: {Artista.Nome}");
         Console.WriteLine($"Duração: {Duracao}");
         if (Disponivel)
         {
