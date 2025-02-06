@@ -1,15 +1,17 @@
-﻿Episodio ep1 = new(2, "Técnicas de facilitação", 45);
+﻿// Criando episódios e adicionando convidados
+Episodio ep1 = new(2, "Técnicas de facilitação", 45);
 ep1.AdicionarConvidados("Maria");
 ep1.AdicionarConvidados("Marcelo");
-
 
 Episodio ep2 = new(1, "Técnicas de aprendizado", 67);
 ep2.AdicionarConvidados("Fernando");
 ep2.AdicionarConvidados("Marcos");
 ep2.AdicionarConvidados("Flavia");
 
+// Criando um podcast e adicionando episódios
 Podcast podcast = new("Podicast Especial", "Eric");
 podcast.AdicionarEpisodio(ep1);
 podcast.AdicionarEpisodio(ep2);
 
+// Exibindo detalhes do podcast
 podcast.ExibirDetalhes();
