@@ -15,3 +15,18 @@ podcast.AdicionarEpisodio(ep2);
 
 // Exibindo detalhes do podcast
 podcast.ExibirDetalhes();
+
+
+// Criando a temporada
+Temporada temporada1 = new("\n\n\nMeu Podcast", 1);
+
+// Criando episódios
+Episodio ep4 = new(4, "Quarto Episódio", 30);
+Episodio ep3 = new(3, "Terceiro Episódio", 45);
+
+// Adicionando episódios à temporada
+temporada1.AdicionarEpisodio(ep4);
+temporada1.AdicionarEpisodio(ep3);
+
+// Exibindo o resumo da temporada
+Console.WriteLine(temporada1.Resumo);  // Saída: Podcast Meu Podcast! Estamos no episódio 2 da temporada 1.

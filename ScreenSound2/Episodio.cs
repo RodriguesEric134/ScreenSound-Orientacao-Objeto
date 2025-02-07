@@ -18,7 +18,7 @@ class Episodio
     public int Duracao { get; }
 
     // Propriedade calculada que retorna um resumo do episódio
-    public string Resumo => $"{Ordem}. {Titulo} ({Duracao} min) - {string.Join(", ", convidados)}";
+    public string Resumo => $"{Ordem}. {Titulo} ({Duracao} min) - Convidados: {string.Join(", ", convidados)}";
 
     // Método para adicionar convidados ao episódio
     public void AdicionarConvidados(string convidado)
